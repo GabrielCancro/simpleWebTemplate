@@ -1,0 +1,44 @@
+<div id="HeaderNav" class="non-collapsed">
+	<div class="headerButton">HOME</div>
+	<div class="headerButton">ABOUT</div>
+	<div class="headerButton">EXIT</div>
+</div>
+
+<script type="text/javascript">
+	$(".headerButton").click((e)=>{
+		var content = $(e.target).html();
+		var node = $("#section_"+content)[0];
+		console.log(content);
+		if(node) node.scrollIntoView({behavior: 'smooth'});
+	});
+</script>
+
+<style>
+	#HeaderNav{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 2em;
+		background-color: #55FF55;
+		margin: 0;
+		padding: 0;
+	}
+	.headerButton{
+		display: inline-block;
+		min-width: 5em;
+		line-height: 1em;
+		padding: .5em .1em;
+		background-color: black;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+		user-select: none;
+	}
+	.headerButton:hover{
+		background-color: #A0A0A0;
+	}
+
+	#HeaderNav.collapsed .headerButton{
+		width: 100%;
+	}
+</style>

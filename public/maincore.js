@@ -8,5 +8,3 @@ function load_panel(idnode,panel){
 		$("#"+idnode).html("fail load..")
 	});
 }
-
-load_panel("MainContent","home");
