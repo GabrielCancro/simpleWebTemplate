@@ -3,9 +3,11 @@ body *{
 }
 
 body {
-	background-color: red;
+	/*background-color: red;*/
+	background: linear-gradient(180deg, lime 2.5em, #B0B0B0 20% );
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
 }
 
 #MainContent{
